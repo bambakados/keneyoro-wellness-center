@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+      --background: 0 0% 100%;
+--foreground: 20 14.3% 4.1%;
+--muted: 60 4.8% 95.9%;
+--muted-foreground: 25 5.3% 44.7%;
+--popover: 0 0% 100%;
+--popover-foreground: 20 14.3% 4.1%;
+--card: 0 0% 100%;
+--card-foreground: 20 14.3% 4.1%;
+--border: 20 5.9% 90%;
+--input: 20 5.9% 90%;
+--primary: 195 85% 55%;
+--primary-foreground: 211 100% 99%;
+--secondary: 142 71% 45%;
+--secondary-foreground: 24 9.8% 10%;
+--accent: 60 4.8% 95.9%;
+--accent-foreground: 24 9.8% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 60 9.1% 97.8%;
+--ring: 20 14.3% 4.1%;
+--radius: 0.5rem;
+  }
+
+/* Healthy Blue-Green Environment */
+html, body {
+  background: linear-gradient(135deg, 
+    #E3F2FD 0%,    /* Light blue */
+    #B2DFDB 20%,   /* Light teal */
+    #81C784 40%,   /* Light green */
+    #66BB6A 55%,   /* Medium green */
+    #4CAF50 75%,   /* Healthy green */
+    #2E7D32 90%,   /* Dark green */
+    #1B5E20 100%   /* Deep forest green */
+  ) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}
+
+/* Ensure main app container doesn't override background */
+#root {
+  background: transparent !important;
+  min-height: 100vh;
+}
+
+/* Healthy leaves pattern overlay */
+body::before {
+  content: '🍃 🌿 🍀 🌱 🍃 🌿 🍀 🌱 🍃 🌿 🍀 🌱 🍃 🌿 🍀 🌱 🍃 🌿 🍀 🌱';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  opacity: 0.1;
+  background-image: 
+    /* Larger, more visible leaves */
+    radial-gradient(ellipse 20px 12px at 20% 10%, rgba(34,139,34,0.25) 30%, transparent 40%),
+    radial-gradient(ellipse 18px 10px at 80% 20%, rgba(50,205,50,0.2) 30%, transparent 40%),
+    radial-gradient(ellipse 25px 15px at 10% 70%, rgba(34,139,34,0.18) 30%, transparent 40%),
+    radial-gradient(ellipse 22px 13px at 90% 80%, rgba(46,125,50,0.22) 30%, transparent 40%),
+    
+    /* Medium visible leaves */
+    radial-gradient(ellipse 15px 8px at 65% 35%, rgba(76,175,80,0.15) 30%, transparent 40%),
+    radial-gradient(ellipse 12px 7px at 25% 85%, rgba(56,142,60,0.18) 30%, transparent 40%),
+    radial-gradient(ellipse 17px 10px at 95% 50%, rgba(27,94,32,0.12) 30%, transparent 40%),
+    
+    /* Small scattered leaves */
+    radial-gradient(ellipse 10px 6px at 50% 15%, rgba(102,187,106,0.12) 30%, transparent 40%),
+    radial-gradient(ellipse 8px 5px at 75% 65%, rgba(129,199,132,0.1) 30%, transparent 40%),
+    radial-gradient(ellipse 12px 7px at 15% 40%, rgba(165,214,167,0.14) 30%, transparent 40%);
+  background-size: 180px 160px, 220px 200px, 280px 260px, 160px 140px, 130px 120px, 200px 180px, 170px 150px, 100px 90px, 140px 130px, 120px 110px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.8;
+  letter-spacing: 15px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Enhanced content containers with African theme */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Beautiful card overlays that complement the African environment */
+.bg-white, .bg-neutral-50, .bg-gray-50 {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+/* African-inspired accent colors for cards */
+.bg-blue-50 {
+  background: rgba(255, 248, 220, 0.9) !important; /* Warm sand color */
+}
+
+.bg-green-50 {
+  background: rgba(240, 255, 240, 0.9) !important; /* Soft savanna green */
+}
+
+.bg-gradient-to-r {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle African textile pattern to gradient backgrounds */
+.bg-gradient-to-r::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(45deg, rgba(139,69,19,0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(139,69,19,0.05) 25%, transparent 25%);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+  .dark {
+      --background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--primary: 207 90% 54%;
+--primary-foreground: 211 100% 99%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--ring: 240 4.9% 83.9%;
+--radius: 0.5rem;
+  }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
